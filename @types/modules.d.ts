@@ -1,3 +1,7 @@
+/// <reference types="node" />
+/// <reference types="react" />
+/// <reference types="react-dom" />
+
 declare namespace NodeJS {
   interface ProcessEnv {
     readonly NODE_ENV: 'development' | 'production' | 'test';
@@ -9,16 +13,6 @@ declare module '*.bmp' {
   const src: string;
   export default src;
 }
-
-declare module '*.scss' {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-// declare module '@assets/styles/antd.global' {
-//   const theme: { readonly [key: string]: string };
-//   export default theme;
-// }
 
 declare module '*.gif' {
   const src: string;
@@ -40,13 +34,24 @@ declare module '*.png' {
   export default src;
 }
 
+declare module '*.webp' {
+  const src: string;
+  export default src;
+}
+
 declare module '*.svg' {
   import * as React from 'react';
 
   export const ReactComponent: React.FunctionComponent<React.SVGProps<
     SVGSVGElement
-  >>;
+  > & { title?: string }>;
 
   const src: string;
   export default src;
+}
+
+
+declare module '*.scss' {
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }
