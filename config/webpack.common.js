@@ -12,7 +12,7 @@ const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 
-//本地
+// 本地
 const paths = require('./paths.js');
 const { getStyleLoaders } = require('./utils.js');
 const getClientEnvironment = require('./env');
@@ -35,8 +35,8 @@ const shouldExcludeFromCommon = new RegExp(
     'highlight\\.js',
     'refractor',
     'react-pdf',
-    'pdfjs-dist'
-  ].join('|')
+    'pdfjs-dist',
+  ].join('|'),
 );
 
 // style files regexes
@@ -45,22 +45,22 @@ const sassRegex = /\.(scss|sass)$/;
 const sassGlobalRegex = /\.global\.(scss|sass)$/;
 
 module.exports = {
-  bail: false, //用 HMR 时，webpack 会将在终端以及浏览器控制台中，以红色文字记录这些错误
+  bail: false, // 用 HMR 时，webpack 会将在终端以及浏览器控制台中，以红色文字记录这些错误
   entry: [paths.appIndex],
   output: {
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
     // 自动解析的扩展
     extensions: paths.moduleFileExtensions.map(ext => `.${ext}`),
     // 别名
     alias: {
-      ...paths.alias
+      ...paths.alias,
       // 'react-dom': '@hot-loader/react-dom'
     },
     // 添加一个目录到模块搜索目录
     modules: ['node_modules', paths.appNodeModules],
-    plugins: [new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson])]
+    plugins: [new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson])],
   },
   optimization: {
     minimize: isEnvProduction,
@@ -72,7 +72,7 @@ module.exports = {
     // https://github.com/facebook/create-react-app/issues/5358
     // runtimeChunk:会为每个仅含有 runtime 的入口起点添加一个额外 chunk;
     runtimeChunk: {
-      name: entrypoint => `runtime-${entrypoint.name}`
+      name: entrypoint => `runtime-${entrypoint.name}`,
       // name: 'runtime'// 值 "single" 会创建一个在所有生成 chunk 之间共享的运行时文件
     },
 
@@ -91,7 +91,7 @@ module.exports = {
           all表示以上两者都包括,异步和非异步块之间也可以共享块
          */
       chunks: 'all',
-      minSize: 30000, //生成块的最小大小（以字节为单位）
+      minSize: 30000, // 生成块的最小大小（以字节为单位）
       minChunks: 1,
       maxAsyncRequests: 6, // 最大异步请求数
       maxInitialRequests: 4, // 最大初始化请求数
@@ -100,44 +100,38 @@ module.exports = {
       cacheGroups: {
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
-          priority: -10
+          priority: -10,
         },
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           chunks: 'initial',
           // name: "vendor",
           priority: -10,
-          enforce: true
+          enforce: true,
         },
         lazy: {
-          test: ({ resource }) => {
-            return /antd/.test(resource);
-          },
+          test: ({ resource }) => /antd/.test(resource),
           chunks: 'async',
           // name: 'lazy',
           priority: 10,
-          enforce: true
+          enforce: true,
         },
         commons: {
           chunks: 'all',
-          test: ({ resource }) => {
-            return (
-              /[\\/]node_modules[\\/]/.test(resource) &&
-              !shouldExcludeFromCommon.test(resource)
-            );
-          },
+          test: ({ resource }) =>
+            /[\\/]node_modules[\\/]/.test(resource) && !shouldExcludeFromCommon.test(resource),
           name: 'common',
           minChunks: 3,
           maxInitialRequests: 5,
           minSize: 0,
-          priority: 20
-        }
-      }
-    }
+          priority: 20,
+        },
+      },
+    },
   },
 
   module: {
-    strictExportPresence: true, //表明文件中如果缺少exports时会直接报错而不是警告。
+    strictExportPresence: true, // 表明文件中如果缺少exports时会直接报错而不是警告。
     rules: [
       {
         test: /\.(ts|tsx)$/,
@@ -149,25 +143,22 @@ module.exports = {
           {
             loader: require.resolve('eslint-loader'),
             options: {
-              fix: true, //启动时格式化代码
-              cache: true, //开启缓存
-              formatter: require.resolve('react-dev-utils/eslintFormatter'),
-              eslintPath: require.resolve('eslint')
-              // resolvePluginsRelativeTo: __dirname
-            }
-          }
-        ]
+              fix: true, // 启动时格式化代码
+              cache: true, // 开启缓存
+            },
+          },
+        ],
       },
       {
-        //oneOf:数组，当规则匹配时，只使用第一个匹配规则。
+        // oneOf:数组，当规则匹配时，只使用第一个匹配规则。
         oneOf: [
           {
             test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
             loader: require.resolve('url-loader'),
             options: {
               limit: '10000',
-              name: 'static/media/[name].[hash:8].[ext]'
-            }
+              name: 'static/media/[name].[hash:8].[ext]',
+            },
           },
 
           {
@@ -176,8 +167,8 @@ module.exports = {
               {
                 loader: 'thread-loader',
                 options: {
-                  workers: os.cpus().length
-                }
+                  workers: os.cpus().length,
+                },
               },
               {
                 loader: 'babel-loader',
@@ -187,7 +178,8 @@ module.exports = {
                     '@babel/preset-react',
                     [
                       '@babel/preset-env',
-                      { // Allow importing core-js in entrypoint and use browserlist to select polyfills
+                      {
+                        // Allow importing core-js in entrypoint and use browserlist to select polyfills
                         useBuiltIns: 'entry',
                         // Set the corejs version we are using to avoid warnings in console
                         // This will need to change once we upgrade to corejs@3
@@ -196,12 +188,12 @@ module.exports = {
                         modules: false,
                         // Exclude transforms that make all code slower
                         exclude: ['transform-typeof-symbol'],
-                      }
-                    ]
+                      },
+                    ],
                   ],
                   plugins: [
                     [
-                      //svg 
+                      // svg
                       require.resolve('babel-plugin-named-asset-import'),
                       {
                         loaderMap: {
@@ -220,7 +212,7 @@ module.exports = {
                         helpers: false,
                         regenerator: true, // generator不会污染全局的
                         useESModules: true,
-                      }
+                      },
                     ],
                     '@babel/plugin-syntax-dynamic-import',
                     // true是less， 可以写'css' 如果不用less
@@ -230,21 +222,21 @@ module.exports = {
                       {
                         libraryName: 'antd',
                         libraryDirectory: 'es',
-                        style: 'css'
-                      }
-                    ]
+                        style: 'css',
+                      },
+                    ],
                   ],
-                  cacheDirectory: true
-                }
-              }
-            ]
+                  cacheDirectory: true,
+                },
+              },
+            ],
           },
           {
             test: cssRegex,
             use: getStyleLoaders({
-              importLoaders: 1
+              importLoaders: 1,
             }),
-            sideEffects: true
+            sideEffects: true,
           },
           // SASS 默认开启 modules
           {
@@ -254,22 +246,22 @@ module.exports = {
               {
                 importLoaders: 2,
                 modules: {
-                  localIdentName: '[path][local]--[hash:base64:5]'
-                }
+                  localIdentName: '[path][local]--[hash:base64:5]',
+                },
               },
-              'sass-loader'
+              'sass-loader',
             ),
-            sideEffects: true
+            sideEffects: true,
           },
           // 全局sass配置 .global.scss or .global.sass
           {
             test: sassGlobalRegex,
             use: getStyleLoaders(
               {
-                importLoaders: 2
+                importLoaders: 2,
               },
-              'sass-loader'
-            )
+              'sass-loader',
+            ),
           },
           {
             loader: require.resolve('file-loader'),
@@ -279,20 +271,21 @@ module.exports = {
             // by webpacks internal loaders.
             exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
             options: {
-              name: 'static/media/[name].[hash:8].[ext]'
-            }
-          }
+              name: 'static/media/[name].[hash:8].[ext]',
+            },
+          },
           // ** STOP ** Are you adding a new loader?
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
   plugins: [
     // 打包进度
     // new WebpackBar({ name: 'React-App' }),
     new ProgressBarPlugin({
-      format: chalk.blue.bold('  build [:bar] ') + chalk.green.bold(':percent') + ' (:elapsed seconds)',
-      clear: false
+      format: `${chalk.blue.bold('  build [:bar] ') +
+        chalk.green.bold(':percent')} (:elapsed seconds)`,
+      clear: false,
     }),
     // 只会打包本地化内容
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn/),
@@ -325,9 +318,7 @@ module.exports = {
           manifest[file.name] = file.path;
           return manifest;
         }, seed);
-        const entrypointFiles = entrypoints.main.filter(
-          fileName => !fileName.endsWith('.map')
-        );
+        const entrypointFiles = entrypoints.main.filter(fileName => !fileName.endsWith('.map'));
 
         return {
           files: manifestFiles,
@@ -336,17 +327,14 @@ module.exports = {
       },
     }),
 
-
     new ForkTsCheckerWebpackPlugin({
       typescript: resolve.sync('typescript', {
-        basedir: paths.appNodeModules
+        basedir: paths.appNodeModules,
       }),
       async: isEnvDevelopment,
       useTypescriptIncrementalApi: true,
       checkSyntacticErrors: true,
-      resolveModuleNameModule: process.versions.pnp
-        ? `${__dirname}/pnpTs.js`
-        : undefined,
+      resolveModuleNameModule: process.versions.pnp ? `${__dirname}/pnpTs.js` : undefined,
       resolveTypeReferenceDirectiveModule: process.versions.pnp
         ? `${__dirname}/pnpTs.js`
         : undefined,
@@ -356,12 +344,12 @@ module.exports = {
         '!**/__tests__/**',
         '!**/?(*.)(spec|test).*',
         '!**/src/setupProxy.*',
-        '!**/src/setupTests.*'
+        '!**/src/setupTests.*',
       ],
       silent: true,
       // The formatter is invoked directly in WebpackDevServerUtils during development
-      formatter: isEnvProduction ? typescriptFormatter : undefined
-    })
+      formatter: isEnvProduction ? typescriptFormatter : undefined,
+    }),
   ],
   node: {
     module: 'empty',
@@ -371,6 +359,6 @@ module.exports = {
     http2: 'empty',
     net: 'empty',
     tls: 'empty',
-    child_process: 'empty'
-  }
+    child_process: 'empty',
+  },
 };

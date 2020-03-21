@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import LogRocket from 'logrocket';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+LogRocket.init('mo2kks/react-app');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -1,7 +1,7 @@
-const common = require('./webpack.common');
 const merge = require('webpack-merge');
+const common = require('./webpack.common');
 
-module.exports = function (webpackEnv) {
+module.exports = webpackEnv => {
   let config;
   if (webpackEnv === 'production') {
     config = require('./webpack.prod');
@@ -9,4 +9,4 @@ module.exports = function (webpackEnv) {
     config = require('./webpack.dev');
   }
   return merge(common, config);
-}
+};
