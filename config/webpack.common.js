@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const resolve = require('resolve');
 const os = require('os');
-const WebpackBar = require('webpackbar');
 const chalk = require('react-dev-utils/chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -281,7 +280,6 @@ module.exports = {
   },
   plugins: [
     // 打包进度
-    // new WebpackBar({ name: 'React-App' }),
     new ProgressBarPlugin({
       format: `${chalk.blue.bold('  build [:bar] ') +
         chalk.green.bold(':percent')} (:elapsed seconds)`,

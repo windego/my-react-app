@@ -3,8 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
-const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
@@ -13,16 +11,7 @@ const env = getClientEnvironment('');
 
 module.exports = {
   mode: 'development',
-  devServer: {
-    contentBase: paths.appPublic,
-    publicPath: '/',
-    port: 8080,
-    hot: true,
-    compress: true,
-    historyApiFallback: true,
-    inline: true,
-  },
-  // entry: [require.resolve('react-dev-utils/webpackHotDevClient')], //入口], //载入热更新
+  entry: [require.resolve('react-dev-utils/webpackHotDevClient')], // 载入热更新
   output: {
     pathinfo: true,
     filename: 'static/js/bundle.js',
@@ -40,10 +29,6 @@ module.exports = {
       inject: true,
       template: paths.appHtml,
     }),
-    // new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime/]),
-    // new InterpolateHtmlPlugin(HtmlWebpackPlugin, {
-    //   PUBLIC_URL: ''
-    // }),
     new webpack.HotModuleReplacementPlugin(),
     new CaseSensitivePathsPlugin(),
     new WatchMissingNodeModulesPlugin(paths.appNodeModules),
