@@ -21,14 +21,10 @@
   "dependencies": {
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
-    "@types/react-router-dom": "^5.1.3",
     "antd": "^4.0.3",
-    "history": "^5.0.0-beta.5",
     "logrocket": "^1.0.6",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-router": "^6.0.0-alpha.2",
-    "react-router-dom": "^6.0.0-alpha.2"
+    "react-dom": "^16.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
