@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import LogRocket from 'logrocket';
+import { Provider } from 'react-redux';
 import App from './App';
+import { store } from './app/store';
 import * as serviceWorker from './serviceWorker';
 
-// LogRocket.init('mo2kks/react-app');
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

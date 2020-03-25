@@ -37,7 +37,7 @@ module.exports = {
       context: 'src',
       configFile: paths.stylelintrc,
       failOnError: false,
-      files: ['**/*.s?(a|c)ss'],
+      // files: ['**/*.s?(a|c)ss'],
       quiet: true,
       fix: true,
       syntax: 'less',
