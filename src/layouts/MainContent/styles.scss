@@ -1,0 +1,24 @@
+.cms-content {
+  position: relative;
+  height: 100%;
+  padding: 32px 40px;
+  overflow-y: auto;
+  border-radius: 2px;
+
+  :global {
+    .ant-menu-submenu-title {
+      padding-left: 0 !important;
+
+      &:hover {
+        background: #eceae9 !important;
+      }
+    }
+
+    .ant-menu-submenu {
+      ul {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+    }
+  }
+}

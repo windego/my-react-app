@@ -262,6 +262,7 @@ module.exports = {
               'sass-loader',
             ),
           },
+
           {
             loader: require.resolve('file-loader'),
             // Exclude `js` files to keep "css" loader working as it injects

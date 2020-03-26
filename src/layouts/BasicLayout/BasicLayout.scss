@@ -1,0 +1,16 @@
+.basic {
+  min-height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+      flex: 1;
+    }
+
+    .footer {
+      text-align: center;
+    }
+  }
+}

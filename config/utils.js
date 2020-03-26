@@ -16,15 +16,15 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     isEnvProduction && {
       loader: MiniCssExtractPlugin.loader,
       options: {
-        hmr: isEnvDevelopment
-      }
+        hmr: isEnvDevelopment,
+      },
     },
     {
       loader: require.resolve('css-loader'),
       options: {
         ...cssOptions,
-        localsConvention: 'dashes'
-      }
+        localsConvention: 'dashes',
+      },
     },
     {
       loader: require.resolve('postcss-loader'),
@@ -34,27 +34,27 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
           require('postcss-flexbugs-fixes'),
           require('postcss-preset-env')({
             autoprefixer: {
-              flexbox: 'no-2009'
+              flexbox: 'no-2009',
             },
-            stage: 3
+            stage: 3,
           }),
           // PostCSS规范化 从browserslist中使用 normalize.css 所需的部分
-          postcssNormalize()
-        ]
-      }
-    }
+          postcssNormalize(),
+        ],
+      },
+    },
   ].filter(Boolean);
   if (preProcessor) {
     loaders.push(
       {
-        loader: require.resolve('resolve-url-loader')
+        loader: require.resolve('resolve-url-loader'),
       },
       {
         loader: require.resolve(preProcessor),
         options: {
-          sourceMap: true
-        }
-      }
+          sourceMap: true,
+        },
+      },
     );
   }
   return loaders;

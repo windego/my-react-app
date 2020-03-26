@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>navicon_download@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1商划_效果评估_新店" transform="translate(-1278.000000, -20.000000)">
+            <g id="topbar" transform="translate(240.000000, 0.000000)">
+                <g id="个人信息" transform="translate(1038.000000, 16.000000)">
+                    <g id="导航/商圈规划备份" transform="translate(0.000000, 4.000000)">
+                        <g id="导航/商圈规划">
+                            <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+                            <g id="编组-2" opacity="0.600000024" transform="translate(7.000000, 6.000000)" stroke="#ABB0B3" stroke-linejoin="round">
+                                <path d="M3.36666667,0 L6.63333333,0 L6.63333333,5.53333333 L9.9,5.53333333 L5,9.88888889 L0.1,5.53333333 L3.36666667,5.53333333 L3.36666667,0 Z" id="形状结合" fill="#ABB0B3"></path>
+                                <line x1="0" y1="13" x2="10" y2="13" id="直线-6" stroke-width="1.4" stroke-linecap="round"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

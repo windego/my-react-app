@@ -1,0 +1,114 @@
+/* 路由过渡效果 */
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-enter-active,
+.fade-exit-active {
+  opacity: 1;
+  transition: all 500ms ease-out;
+  transform: translateX(0);
+}
+
+.fade-exit {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  vertical-align: -0.15em;
+  fill: currentColor;
+}
+
+// 筛选框 基本样式
+.filter-form {
+  .ant-form-item-label > label {
+    font-weight: 400;
+    color: #6f6f6f;
+  }
+
+  &.ant-form-inline > .ant-form-item {
+    min-width: 170px;
+    margin-right: 32px;
+    margin-bottom: 16px;
+  }
+
+  .ant-form-item-control {
+    flex: 1;
+  }
+}
+
+// 列表 基本样式
+.base-table {
+  // striped
+  .striped-row {
+    background: #f6f8fa;
+  }
+  // 表头
+  .ant-table-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 !important;
+
+    button {
+      width: 160px;
+      background: rgba(245, 45, 41, 1);
+    }
+  }
+
+  .ant-table-content {
+    > table > thead > tr {
+      height: 36px;
+
+      .ant-table-cell {
+        padding: 8px 24px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #6f6f6f;
+        background-color: rgba(246, 248, 250, 1) !important;
+      }
+    }
+  }
+
+  // table-body
+  .ant-table-tbody > tr > .ant-table-cell {
+    padding: 8px 24px;
+    font-weight: 300;
+    color: #0f0f0f;
+  }
+
+  // 操作button
+  a.table-button:not(.primary) {
+    font-weight: 400;
+    color: #0f0f0f;
+
+    &:hover {
+      color: #f52d29;
+      cursor: pointer;
+    }
+  }
+}
+
+//tabs 样式
+.ant-tabs-nav {
+  .ant-tabs-tab {
+    width: 88px;
+    padding: 17px 0 !important;
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+  }
+
+  .ant-tabs-ink-bar.ant-tabs-ink-bar-animated {
+    width: 88px !important;
+  }
+}
+
+.ant-form-inline > .ant-form-item {
+  margin-right: 40px !important;
+}

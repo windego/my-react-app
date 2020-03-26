@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>newstore_4@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="106.296723%" y1="105.455987%" x2="-5.52431534%" y2="-7.92350016%" id="linearGradient-1">
+            <stop stop-color="#2771FF" offset="0%"></stop>
+            <stop stop-color="#367BFF" offset="0%"></stop>
+            <stop stop-color="#74D6FF" offset="97.5942458%"></stop>
+            <stop stop-color="#54D4FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1商划_效果评估_新店" transform="translate(-952.000000, -329.000000)">
+            <g id="数据概览" transform="translate(280.000000, 277.000000)">
+                <g id="编组-9备份-7" transform="translate(600.000000, 36.000000)">
+                    <g id="效果评估/新店数" transform="translate(72.000000, 16.000000)">
+                        <g id="编组-2">
+                            <g id="效果评估/新店数-2">
+                                <g id="效果评估/新店数">
+                                    <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="32" height="32" rx="2"></rect>
+                                    <rect id="矩形" fill="url(#linearGradient-1)" x="2" y="2" width="28" height="28" rx="14"></rect>
+                                    <g id="编组" transform="translate(10.500000, 10.000000)" fill="#FFFFFF">
+                                        <path d="M1,6 C1.55228475,6 2,6.44771525 2,7 L2,10 C2,10.5522847 1.55228475,11 1,11 C0.44771525,11 6.76353751e-17,10.5522847 0,10 L0,7 C-6.76353751e-17,6.44771525 0.44771525,6 1,6 Z" id="矩形"></path>
+                                        <path d="M5.5,3 C6.05228475,3 6.5,3.44771525 6.5,4 L6.5,10 C6.5,10.5522847 6.05228475,11 5.5,11 C4.94771525,11 4.5,10.5522847 4.5,10 L4.5,4 C4.5,3.44771525 4.94771525,3 5.5,3 Z" id="矩形"></path>
+                                        <path d="M10,0 C10.5522847,-1.01453063e-16 11,0.44771525 11,1 L11,10 C11,10.5522847 10.5522847,11 10,11 C9.44771525,11 9,10.5522847 9,10 L9,1 C9,0.44771525 9.44771525,1.01453063e-16 10,0 Z" id="矩形"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

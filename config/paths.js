@@ -2,10 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const getPublicUrlOrPath = require('react-dev-utils/getPublicUrlOrPath');
 
-
-
 const appDirectory = fs.realpathSync(process.cwd());
-
 
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 const getPublicUrl = appPackageJson => require(appPackageJson).homepage || '/';
@@ -14,44 +11,37 @@ const getPublicUrl = appPackageJson => require(appPackageJson).homepage || '/';
 const publicUrlOrPath = getPublicUrlOrPath(
   process.env.NODE_ENV === 'development',
   require(resolveApp('package.json')).homepage,
-  process.env.PUBLIC_URL
-)
-
-
+  process.env.PUBLIC_URL,
+);
 
 const generateAlias = () => {
   const {
-    compilerOptions: { baseUrl: tsConfigBaseUrl, paths: tsConfigPaths }
+    compilerOptions: { baseUrl: tsConfigBaseUrl, paths: tsConfigPaths },
   } = require(resolveApp('tsconfig.json'));
 
   const aliasNameRegex = /^(@\w+)\/\*$/;
   const aliasPathRegex = /^(\*)$|^([\w/]+)\/\*$/;
 
-  return Object.entries(tsConfigPaths).reduce(
-    (allAlias, [aliasName, aliasPath]) => {
-      const nameMatches = aliasNameRegex.exec(aliasName);
+  return Object.entries(tsConfigPaths).reduce((allAlias, [aliasName, aliasPath]) => {
+    const nameMatches = aliasNameRegex.exec(aliasName);
 
-      if (nameMatches) {
-        const [, name] = nameMatches;
+    if (nameMatches) {
+      const [, name] = nameMatches;
 
-        const [, basePath, specificPath] = aliasPathRegex.exec(
-          aliasPath.toString()
-        );
+      const [, basePath, specificPath] = aliasPathRegex.exec(aliasPath.toString());
 
-        if (basePath) {
-          return { ...allAlias, [name]: resolveApp(tsConfigBaseUrl) };
-        }
-        if (specificPath) {
-          return {
-            ...allAlias,
-            [name]: resolveApp(path.join(tsConfigBaseUrl, specificPath))
-          };
-        }
+      if (basePath) {
+        return { ...allAlias, [name]: resolveApp(tsConfigBaseUrl) };
       }
-      return allAlias;
-    },
-    {}
-  );
+      if (specificPath) {
+        return {
+          ...allAlias,
+          [name]: resolveApp(path.join(tsConfigBaseUrl, specificPath)),
+        };
+      }
+    }
+    return allAlias;
+  }, {});
 };
 
 const moduleFileExtensions = ['ts', 'tsx', 'json', 'mjs', 'js', 'jsx', 'scss'];
@@ -70,6 +60,7 @@ module.exports = {
   appTsConfig: resolveApp('tsconfig.json'),
   stylelintrc: resolveApp('.stylelintrc.js'),
   yarnLockFile: resolveApp('yarn.lock'),
+  antdStyle: resolveApp('src/assets/styles/antd.global'),
   publicUrlOrPath,
 
   //
@@ -82,7 +73,7 @@ module.exports = {
   // appTsConfig: resolveApp('tsconfig.json'),
 
   //
-  // antdStyle: resolveApp('src/assets/styles/antd.global'),
+
   // proxy: resolveApp('config/.proxyrc.js'),
 };
 module.exports.moduleFileExtensions = moduleFileExtensions;

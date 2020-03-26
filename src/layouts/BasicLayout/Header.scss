@@ -1,0 +1,36 @@
+.head {
+  z-index: 9;
+  width: 100%;
+  height: 64px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  transition: background 0.3s, width 0.2s;
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    .title {
+      margin-left: 16px;
+      font-size: 24px;
+      color: white;
+    }
+
+    @media screen and (max-width: 768px) {
+      .title {
+        display: none;
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      line-height: 64px;
+
+      .subMenu {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

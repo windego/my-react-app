@@ -1,0 +1,30 @@
+.search {
+  width: 160px;
+  margin-bottom: 16px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 160px;
+  height: 44px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 44px;
+  line-height: 22px;
+  color: #fff;
+  background: rgba(245, 45, 41, 1);
+  border-radius: 4px;
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 46px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+
+  .img {
+    float: right;
+    width: 100%;
+    max-width: 430px;
+    height: 360px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+
+  .content {
+    flex: auto;
+
+    h1 {
+      margin-bottom: 24px;
+      font-size: 72px;
+      font-weight: 600;
+      line-height: 72px;
+      color: #434e59;
+    }
+
+    .desc {
+      margin-bottom: 16px;
+      font-size: 20px;
+      line-height: 28px;
+      color: rgba(0, 0, 0, 0.45);
+    }
+
+    .actions {
+      button:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+    text-align: center;
+  }
+}
