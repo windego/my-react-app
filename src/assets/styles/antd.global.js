@@ -12,4 +12,5 @@ module.exports = {
   '@layout-header-background': '#FFFFFF',
   '@btn-default-color': '#F52D29',
   '@btn-default-border': '#F52D29',
+  '@border-radius-base': '4px',
 };

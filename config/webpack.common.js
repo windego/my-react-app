@@ -221,7 +221,7 @@ module.exports = {
                       {
                         libraryName: 'antd',
                         libraryDirectory: 'es',
-                        style: 'css',
+                        style: true,
                       },
                     ],
                   ],
@@ -261,6 +261,24 @@ module.exports = {
               },
               'sass-loader',
             ),
+          },
+          {
+            test: /\.less$/,
+            use: [
+              {
+                loader: 'style-loader',
+              },
+              {
+                loader: 'css-loader', // translates CSS into CommonJS
+              },
+              {
+                loader: 'less-loader', // compiles Less to CSS
+                options: {
+                  modifyVars: require(paths.antdStyle),
+                  javascriptEnabled: true,
+                },
+              },
+            ],
           },
 
           {

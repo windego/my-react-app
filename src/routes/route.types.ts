@@ -5,7 +5,7 @@ interface MenuDataItem {
   children?: MenuDataItem[];
   hideChildrenInMenu?: boolean;
   hideInMenu?: boolean;
-  icon?: React.ReactNode;
+  icon?: string;
   locale?: string;
   name?: string;
   key?: string;
