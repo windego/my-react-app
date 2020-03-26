@@ -61,6 +61,7 @@ module.exports = {
   stylelintrc: resolveApp('.stylelintrc.js'),
   yarnLockFile: resolveApp('yarn.lock'),
   antdStyle: resolveApp('src/assets/styles/antd.global'),
+  proxy: resolveApp('config/proxy.js'),
   publicUrlOrPath,
 
   //

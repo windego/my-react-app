@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 // eslint-disable-next-line import/no-cycle
-import { AppThunk, RootState } from '../../app/store';
+import { AppThunk, RootState } from '@store/index';
 
 interface CounterState {
   value: number;
