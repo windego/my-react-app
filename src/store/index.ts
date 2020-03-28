@@ -7,14 +7,16 @@ import { combineReducers, Reducer } from 'redux';
 import counterReducer from '../features/counter/counterSlice';
 
 import userInfoReducer from './modules/userInfoSlice';
+import basicReducer from './modules/basicSlice';
 
-console.log(getDefaultMiddleware());
-console.log(logger);
+// console.log(getDefaultMiddleware());
+// console.log(logger);
 
 const makeRootReducer = (reducers?: Reducer) =>
   combineReducers({
     counter: counterReducer,
     userInfo: userInfoReducer,
+    basic: basicReducer,
     ...reducers,
   });
 

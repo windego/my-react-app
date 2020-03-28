@@ -1,20 +1,43 @@
+$header-height: 50px; // Header 高度
 .header {
   z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
-  padding: 0;
-  line-height: 64px;
+  height: $header-height;
+  padding-left: 0;
+  padding-right: 24px;
+  line-height: $header-height;
   background: #fff;
   border-bottom: 1px solid rgb(218, 218, 218);
 
   .header-left {
-    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    line-height: $header-height;
+    vertical-align: middle;
 
-    .ant-breadcrumb a:hover {
-      color: #999;
+    .trigger {
+      font-size: 18px;
+      line-height: $header-height;
+      padding: 0 24px;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #1890ff;
+      }
     }
+
+    .breadcrumb {
+      line-height: $header-height;
+    }
+
+    // .ant-breadcrumb a:hover {
+    //   color: #999;
+    // }
   }
 
   .header-right {

@@ -34,6 +34,6 @@
     "strict": true,
     "suppressImplicitAnyIndexErrors": true
   },
-  "include": ["src/**/*", "@types/**/*"],
+  "include": ["src/**/*", "@types/**/*", "src/store/modules/.ts"],
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }

@@ -1,0 +1,28 @@
+.popover {
+  .title {
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+  }
+
+  :global {
+    .ant-popover-title {
+      min-width: 100px;
+    }
+
+    .ant-popover-inner-content {
+      padding: 8px;
+      text-align: center;
+
+      .ant-menu {
+        border-right: 0;
+
+        .ant-menu-item {
+          margin-top: 0;
+          margin-bottom: 0;
+          background: transparent;
+        }
+      }
+    }
+  }
+}
