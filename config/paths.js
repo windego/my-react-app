@@ -47,6 +47,7 @@ const generateAlias = () => {
 const moduleFileExtensions = ['ts', 'tsx', 'json', 'mjs', 'js', 'jsx', 'scss'];
 
 module.exports = {
+  dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
   appPublic: resolveApp('public'),
   appIndex: resolveApp('src/index.tsx'),

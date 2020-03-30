@@ -5,9 +5,6 @@ const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeM
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const paths = require('./paths');
-const getClientEnvironment = require('./env');
-
-const env = getClientEnvironment('');
 
 module.exports = {
   mode: 'development',

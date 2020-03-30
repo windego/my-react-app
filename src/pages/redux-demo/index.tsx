@@ -4,6 +4,7 @@ import { Counter } from '../../features/counter/Counter';
 import './App.css';
 
 function App() {
+  console.log(process.env.REACT_APP_TITLE);
   return (
     <div className="App">
       <header className="App-header">
