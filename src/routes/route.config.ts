@@ -3,22 +3,18 @@ import RouteConfig from '@routes/route.types';
 import demoRoutes from '@routes/demos.route';
 // import AUTH_MAP from '@constants/auth';
 
-import NavHome from '@assets/images/nav_home.svg';
-import NavAccount from '@assets/images/nav_account.svg';
-import NavBusiness from '@assets/images/nav_Businessplanning.svg';
-
 const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: '首页',
     exact: true,
-    icon: NavHome,
+    icon: 'home',
     component: lazy(() => import(/* webpackChunkName: "dashboard" */ '@pages/redux-demo')),
   },
   {
     path: '/business',
     name: '商圈规划',
-    icon: NavBusiness,
+    icon: 'home',
     children: [
       {
         path: '/business/manage',
@@ -54,7 +50,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/user',
     name: '账号权限',
-    icon: NavAccount,
+    icon: 'home',
     children: [
       {
         path: '/user/role',

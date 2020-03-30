@@ -68,6 +68,7 @@ module.exports = {
     'default-case': 'off',
     'global-require': 'off',
     'no-param-reassign': 'off',
+    'no-plusplus': 'off',
 
     //import
     'import/no-extraneous-dependencies': 'off',

@@ -2,11 +2,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 // eslint-disable-next-line import/no-cycle
 import { AppThunk, RootState } from '@store/index';
 
+import cacheStorage from '@utils/localstorageExpires';
+
 interface BasicState {
   collapsed: boolean;
 }
 const initialState: BasicState = {
-  collapsed: JSON.parse(localStorage.getItem('collapsed') || 'false'),
+  collapsed: cacheStorage.get('collapsed'),
 };
 
 export const slice = createSlice({
@@ -21,7 +23,9 @@ export const slice = createSlice({
     //   });
     // },
     changeCollapsed: state => {
-      state.collapsed = !state.collapsed;
+      const collapsed = !state.collapsed;
+      cacheStorage.set('collapsed', collapsed);
+      state.collapsed = collapsed;
     },
     // decrement: state => {
     //   state.value -= 1;

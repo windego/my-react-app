@@ -14,7 +14,6 @@ import styles from './Counter.scss';
 export function Counter() {
   const count = useSelector(selectCount);
   const all = useSelector(selectUserInfo);
-  console.log(all);
 
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');

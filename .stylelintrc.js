@@ -10,11 +10,12 @@ module.exports = {
     'declaration-block-trailing-semicolon': null,
     'no-descending-specificity': null,
     'declaration-colon-newline-after': null,
+    'at-rule-no-unknown': null,
     'selector-pseudo-class-no-unknown': [
       true,
       {
-        ignorePseudoClasses: ['global']
-      }
-    ]
-  }
+        ignorePseudoClasses: ['global', 'local'],
+      },
+    ],
+  },
 };
