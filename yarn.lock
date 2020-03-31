@@ -1029,7 +1029,7 @@
 
 "@commitlint/cli@^8.3.5":
   version "8.3.5"
-  resolved "https://registry.npm.taobao.org/@commitlint/cli/download/@commitlint/cli-8.3.5.tgz?cache=0&sync_timestamp=1579108288463&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40commitlint%2Fcli%2Fdownload%2F%40commitlint%2Fcli-8.3.5.tgz#6d93a3a8b2437fa978999d3f6a336bcc70be3fd3"
+  resolved "https://registry.npm.taobao.org/@commitlint/cli/download/@commitlint/cli-8.3.5.tgz#6d93a3a8b2437fa978999d3f6a336bcc70be3fd3"
   integrity sha1-bZOjqLJDf6l4mZ0/ajNrzHC+P9M=
   dependencies:
     "@commitlint/format" "^8.3.4"
@@ -1242,10 +1242,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@reduxjs/toolkit@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@reduxjs/toolkit/download/@reduxjs/toolkit-1.3.0.tgz#c8be2e02e1a42f2507d4bf15dc71720e96011fa4"
-  integrity sha1-yL4uAuGkLyUH1L8V3HFyDpYBH6Q=
+"@reduxjs/toolkit@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.npm.taobao.org/@reduxjs/toolkit/download/@reduxjs/toolkit-1.3.2.tgz#cbd062f0b806eb4611afeb2b30240e5186d6dd27"
+  integrity sha1-y9Bi8LgG60YRr+srMCQOUYbW3Sc=
   dependencies:
     immer "^6.0.1"
     redux "^4.0.0"
@@ -1558,6 +1558,11 @@
     "@types/node" "*"
     "@types/unist" "*"
     "@types/vfile-message" "*"
+
+"@types/webpack-env@^1.15.1":
+  version "1.15.1"
+  resolved "https://registry.npm.taobao.org/@types/webpack-env/download/@types/webpack-env-1.15.1.tgz#c8e84705e08eed430b5e15b39c65b0944e4d1422"
+  integrity sha1-yOhHBeCO7UMLXhWznGWwlE5NFCI=
 
 "@typescript-eslint/eslint-plugin@^2.24.0":
   version "2.24.0"
@@ -5678,7 +5683,7 @@ human-signals@^1.1.1:
 
 husky@^4.2.3:
   version "4.2.3"
-  resolved "https://registry.npm.taobao.org/husky/download/husky-4.2.3.tgz?cache=0&sync_timestamp=1581548917501&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhusky%2Fdownload%2Fhusky-4.2.3.tgz#3b18d2ee5febe99e27f2983500202daffbc3151e"
+  resolved "https://registry.npm.taobao.org/husky/download/husky-4.2.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhusky%2Fdownload%2Fhusky-4.2.3.tgz#3b18d2ee5febe99e27f2983500202daffbc3151e"
   integrity sha1-OxjS7l/r6Z4n8pg1ACAtr/vDFR4=
   dependencies:
     chalk "^3.0.0"
@@ -6622,10 +6627,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^10.0.9:
-  version "10.0.9"
-  resolved "https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.0.9.tgz?cache=0&sync_timestamp=1585026300664&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.0.9.tgz#185aabb2432e9467c84add306c990f1c20da3cdb"
-  integrity sha1-GFqrskMulGfISt0wbJkPHCDaPNs=
+lint-staged@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.1.0.tgz?cache=0&sync_timestamp=1585575166435&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.1.0.tgz#18785bb005d5ed404f1c1db6563e082f7a7baac2"
+  integrity sha1-GHhbsAXV7UBPHB22Vj4IL3p7qsI=
   dependencies:
     chalk "^3.0.0"
     commander "^4.0.1"
@@ -9748,7 +9753,7 @@ redux-thunk@^2.3.0:
 
 redux@^3.6.0:
   version "3.7.2"
-  resolved "https://registry.npm.taobao.org/redux/download/redux-3.7.2.tgz?cache=0&sync_timestamp=1577154206919&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fredux%2Fdownload%2Fredux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+  resolved "https://registry.npm.taobao.org/redux/download/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   integrity sha1-BrcxIyFZAdJdBlvjQusCa8HIU3s=
   dependencies:
     lodash "^4.2.1"

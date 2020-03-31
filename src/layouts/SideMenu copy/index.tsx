@@ -8,7 +8,7 @@ import logo from '@assets/images/logo_small.png';
 import navLeft from '@assets/images/nav_left.svg';
 import navRight from '@assets/images/nav_right.svg';
 
-import { selectCollapsed, changeCollapsed } from '@store/modules/basicSlice';
+import { selectCollapsed, changeCollapsed } from '@src/store/modules/basic.module';
 
 import styles from './styles.scss';
 

@@ -13,7 +13,7 @@ import logo from '@assets/images/logo_small.png';
 import navLeft from '@assets/images/nav_left.svg';
 import navRight from '@assets/images/nav_right.svg';
 
-import { selectCollapsed, changeCollapsed } from '@store/modules/basicSlice';
+import { selectCollapsed, changeCollapsed } from '@src/store/modules/basic.module';
 
 import styles from './styles.scss';
 
@@ -76,7 +76,7 @@ const SiderMenu: React.FC = () => {
   };
 
   return (
-    <Sider theme="light" className={styles.sider} width={160} collapsed={collapsed}>
+    <Sider theme="light" className={styles.sider} width={220} collapsed={collapsed}>
       <div className={styles.logo}>
         <img src={collapsed ? logo : yum} alt="KFC" style={{ height: collapsed ? 40 : 48 }} />
       </div>

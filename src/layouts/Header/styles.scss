@@ -1,4 +1,5 @@
 $header-height: 50px; // Header 高度
+
 .header {
   z-index: 5;
   display: flex;
@@ -14,14 +15,12 @@ $header-height: 50px; // Header 高度
   .header-left {
     display: flex;
     align-items: center;
-    justify-content: start;
     text-align: center;
     line-height: $header-height;
     vertical-align: middle;
 
     .trigger {
       font-size: 18px;
-      line-height: $header-height;
       padding: 0 24px;
       cursor: pointer;
       transition: color 0.3s;
@@ -31,13 +30,9 @@ $header-height: 50px; // Header 高度
       }
     }
 
-    .breadcrumb {
-      line-height: $header-height;
+    .ant-breadcrumb a:hover {
+      color: #999;
     }
-
-    // .ant-breadcrumb a:hover {
-    //   color: #999;
-    // }
   }
 
   .header-right {
@@ -79,23 +74,23 @@ $header-height: 50px; // Header 高度
     color: #0f0f0f;
   }
 
-  .ant-breadcrumb-separator {
-    margin: 0;
-  }
-  // 退出
-  .ant-dropdown {
-    top: 56px !important;
+  // .ant-breadcrumb-separator {
+  //   margin: 0;
+  // }
+  // // 退出
+  // .ant-dropdown {
+  //   top: 56px !important;
 
-    .ant-dropdown-menu {
-      width: 174px;
-      padding: 0;
+  //   .ant-dropdown-menu {
+  //     width: 174px;
+  //     padding: 0;
 
-      .ant-dropdown-menu-item {
-        height: 56px;
-        padding: 0;
-        padding-left: 24px;
-        line-height: 56px;
-      }
-    }
-  }
+  //     .ant-dropdown-menu-item {
+  //       height: 56px;
+  //       padding: 0;
+  //       padding-left: 24px;
+  //       line-height: 56px;
+  //     }
+  //   }
+  // }
 }

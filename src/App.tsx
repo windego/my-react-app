@@ -3,8 +3,8 @@ import { Switch, BrowserRouter as Router } from 'react-router-dom';
 import App from '@layouts/index';
 import { getUserInfo } from '@layouts/api';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { setUserInfo } from '@store/modules/userInfoSlice';
+import { useDispatch } from 'react-redux';
+import { setUserInfo } from '@src/store/modules/userInfo.module';
 
 interface Props {}
 

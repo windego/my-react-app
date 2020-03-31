@@ -16,7 +16,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import AvatarImg from '@components/AvatarImg';
 import Download from '@components/Download';
 
-import { selectCollapsed, changeCollapsed } from '@store/modules/basicSlice';
+import { selectCollapsed, changeCollapsed } from '@src/store/modules/basic.module';
 import styles from './styles.scss';
 
 const { Header } = Layout;
@@ -31,13 +31,17 @@ const TopHeader: React.FC = () => {
   return (
     <Header className={styles.header}>
       <div className={styles.headerLeft}>
-        <div onClick={() => dispatch(changeCollapsed())}>
-          {collapsed ? (
-            <MenuUnfoldOutlined className={styles.trigger} />
-          ) : (
-            <MenuFoldOutlined className={styles.trigger} />
-          )}
-        </div>
+        {collapsed ? (
+          <MenuUnfoldOutlined
+            className={styles.trigger}
+            onClick={() => dispatch(changeCollapsed())}
+          />
+        ) : (
+          <MenuFoldOutlined
+            className={styles.trigger}
+            onClick={() => dispatch(changeCollapsed())}
+          />
+        )}
         <Breadcrumb separator=">" className={styles.breadcrumb}>
           {breadcrumb.map((item, index: number) => {
             const { name, path } = item;
