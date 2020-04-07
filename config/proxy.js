@@ -3,12 +3,12 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 module.exports = app => {
   app.use(
     createProxyMiddleware('/react', {
-      target: 'http://10.188.40.96:7300/mock/5e46a13daf8e11668378af44/kfc-area',
+      target: 'https://mock.zhangweijie.info/mock/5e8318a175ca572be0b3c729',
       secure: false,
       changeOrigin: true,
-      pathRewrite: {
-        '^/react': '/management',
-      },
+      // pathRewrite: {
+      //   '^/react': '/management',
+      // },
     }),
   );
   app.use(
