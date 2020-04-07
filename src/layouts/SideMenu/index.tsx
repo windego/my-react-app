@@ -80,6 +80,7 @@ const SiderMenu: React.FC = () => {
       {/* <div className={styles.logo}>
         <img src={collapsed ? logo : yum} alt="KFC" style={{ height: collapsed ? 40 : 48 }} />
       </div> */}
+
       <Menu
         theme="light"
         mode="inline"
