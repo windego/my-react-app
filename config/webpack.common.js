@@ -224,6 +224,7 @@ module.exports = {
                         style: true,
                       },
                     ],
+                    'transform-class-properties',
                   ],
                   cacheDirectory: true,
                 },
