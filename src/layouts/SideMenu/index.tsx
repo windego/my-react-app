@@ -8,12 +8,9 @@ import menus from '@routes/route.config';
 
 import Icon from '@components/Icon';
 
-import yum from '@assets/images/yum.png';
-import logo from '@assets/images/logo_small.png';
-import navLeft from '@assets/images/nav_left.svg';
-import navRight from '@assets/images/nav_right.svg';
+import logo from '@assets/images/logo.png';
 
-import { selectCollapsed, changeCollapsed } from '@src/store/modules/basic.module';
+import { name, selectCollapsed, changeCollapsed } from '@src/store/modules/basic.module';
 
 import styles from './styles.scss';
 
@@ -21,7 +18,7 @@ const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const SiderMenu: React.FC = () => {
-  const collapsed = useSelector(selectCollapsed);
+  const { collapsed, title } = useSelector(state => state[name]);
   const dispatch = useDispatch();
 
   const { pathname } = useLocation();
@@ -77,9 +74,10 @@ const SiderMenu: React.FC = () => {
 
   return (
     <Sider theme="light" className={styles.sider} width={220} collapsed={collapsed}>
-      {/* <div className={styles.logo}>
-        <img src={collapsed ? logo : yum} alt="KFC" style={{ height: collapsed ? 40 : 48 }} />
-      </div> */}
+      <div className={styles.logo}>
+        <img src={logo} width="32" alt="" />
+        {!collapsed ? <span className={styles.title}>{title}</span> : ''}
+      </div>
       <Menu
         theme="light"
         mode="inline"

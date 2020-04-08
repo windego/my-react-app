@@ -14,7 +14,7 @@ function Index() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    document.title = `物流聚合平台-${getDocumentTitle(pathname)}`;
+    document.title = `React-${getDocumentTitle(pathname)}`;
   }, [pathname]);
 
   return (

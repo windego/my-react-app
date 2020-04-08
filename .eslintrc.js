@@ -69,6 +69,7 @@ module.exports = {
     'global-require': 'off',
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
+    'dot-notation': 'off',
 
     //import
     'import/no-extraneous-dependencies': 'off',

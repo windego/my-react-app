@@ -4,7 +4,7 @@ import { AppThunk, RootState } from '@store/index';
 
 const initialState: IUserInfo = {
   user_id: '',
-  user_name: '2222',
+  userName: '用户名',
   chinesename: '',
   role_id: 0,
   role_name: '',

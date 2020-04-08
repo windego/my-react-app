@@ -15,7 +15,6 @@ import {
 function App() {
   const count = useSelector(selectCount);
   const all = useSelector(state => state);
-  console.log(all);
 
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');

@@ -6,9 +6,11 @@ import cacheStorage from '@utils/localstorageExpires';
 
 interface BasicState {
   collapsed: boolean;
+  title: string;
 }
 const initialState: BasicState = {
   collapsed: cacheStorage.get('collapsed'),
+  title: 'React Demo',
 };
 
 export const slice = createSlice({
@@ -38,6 +40,7 @@ export const slice = createSlice({
 });
 
 export const { changeCollapsed } = slice.actions;
+export const { name } = slice;
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -53,5 +56,6 @@ export const { changeCollapsed } = slice.actions;
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectCollapsed = (state: RootState) => state.basic.collapsed;
+export const getTitle = (state: RootState) => state.basic.title;
 
 export default slice.reducer;

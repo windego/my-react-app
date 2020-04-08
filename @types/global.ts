@@ -56,7 +56,7 @@ declare interface IPrivilege {
 
 declare interface IUserInfo {
   user_id: string;
-  user_name: string;
+  userName: string;
   chinesename: string;
   role_id: number;
   role_name: string; // 角色名称-超管

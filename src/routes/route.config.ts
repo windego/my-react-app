@@ -16,7 +16,7 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: '/business',
-    name: '商圈规划',
+    name: '组件',
     icon: 'home',
     children: [
       {

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import moment from 'moment';
 import { serialize, deserialize } from './helps';
 
