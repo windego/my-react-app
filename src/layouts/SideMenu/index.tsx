@@ -73,7 +73,13 @@ const SiderMenu: React.FC = () => {
   };
 
   return (
-    <Sider theme="light" className={styles.sider} width={220} collapsed={collapsed}>
+    <Sider
+      theme="light"
+      className={styles.sider}
+      width={220}
+      style={{ height: '100vh' }}
+      collapsed={collapsed}
+    >
       <div className={styles.logo}>
         <img src={logo} width="32" alt="" />
         {!collapsed ? <span className={styles.title}>{title}</span> : ''}

@@ -51,7 +51,7 @@ const TopHeader: React.FC = () => {
   );
 
   return (
-    <Header className={styles.header}>
+    <Header className={styles.topHeader}>
       <Row>
         <Col xs={0} sm={0} md={2}>
           <div className={styles.left}>
