@@ -15,9 +15,9 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     isEnvDevelopment && require.resolve('style-loader'),
     isEnvProduction && {
       loader: MiniCssExtractPlugin.loader,
-      options: {
-        hmr: isEnvDevelopment,
-      },
+      // options: {
+      //   hmr: isEnvDevelopment,
+      // },
     },
     {
       loader: require.resolve('css-loader'),
@@ -41,6 +41,7 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
           // PostCSS规范化 从browserslist中使用 normalize.css 所需的部分
           postcssNormalize(),
         ],
+        sourceMap: isEnvProduction,
       },
     },
   ].filter(Boolean);
