@@ -4,17 +4,13 @@ import redux from '@assets/images/redux.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectUserInfo } from '@src/store/modules/userInfo.module';
 import styles from './styles.scss';
-import {
-  decrement,
-  increment,
-  incrementByAmount,
-  incrementAsync,
-  selectCount,
-} from './demo.module';
+import { decrement, increment, incrementByAmount, incrementAsync, selectCount } from './module';
 
 function App() {
   const count = useSelector(selectCount);
   const all = useSelector(state => state);
+  console.log('demo');
+  console.log(all);
 
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');

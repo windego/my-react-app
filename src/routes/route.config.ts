@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 
-// import loadable from '@utils/loadable';
+import loadable from '@utils/loadable';
 
 import RouteConfig from '@routes/route.types';
 import demoRoutes from '@routes/demos.route';
@@ -22,13 +22,14 @@ const routes: Array<RouteConfig> = [
       {
         path: '/business/manage',
         name: 'demo',
-        component: lazy(() => import(/* webpackChunkName: "demo" */ '@src/pages/demo')),
+        component: loadable('demo'),
       },
       {
         path: '/business/counter',
         name: 'counter',
-        component: lazy(() => import(/* webpackChunkName: "counter" */ '@src/pages/counter')),
+        component: loadable('counter'),
       },
+
       // {
       //   path: '/business/effect',
       //   name: '效果评估',

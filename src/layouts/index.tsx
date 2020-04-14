@@ -8,7 +8,7 @@ import Header from './Header';
 import SideMenu from './SideMenu';
 import MainContent from './MainContent';
 
-// LogRocket.init('mo2kks/fe-area-platform');
+LogRocket.init('mo2kks/react-app');
 
 function Index() {
   const { pathname } = useLocation();

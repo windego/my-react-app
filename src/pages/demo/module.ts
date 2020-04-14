@@ -51,4 +51,4 @@ export const incrementAsync = (amount: number): AppThunk => dispatch => {
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectCount = (state: RootState) => state[name]?.value;
 
-export default slice.reducer;
+export default slice;

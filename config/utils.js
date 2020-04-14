@@ -12,13 +12,21 @@ const isEnvProduction = process.env.NODE_ENV === 'production';
 
 const getStyleLoaders = (cssOptions, preProcessor) => {
   const loaders = [
-    require.resolve('style-loader'),
+    // isEnvDevelopment && require.resolve('style-loader'),
     // isEnvProduction && {
     //   loader: MiniCssExtractPlugin.loader,
     //   // options: {
     //   //   hmr: isEnvDevelopment,
     //   // },
     // },
+    {
+      loader: MiniCssExtractPlugin.loader,
+      options: {
+        hmr: isEnvDevelopment,
+        esModule: true,
+        reloadAll: true,
+      },
+    },
     {
       loader: require.resolve('css-loader'),
       options: {
