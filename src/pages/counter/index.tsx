@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import redux from '@assets/images/redux.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectUserInfo } from '@src/store/modules/userInfo.module';
+import { RootState } from '@store/index';
 import styles from './styles.scss';
 import { decrement, increment, incrementByAmount, incrementAsync, selectCount } from './module';
 
 function App() {
   const count = useSelector(selectCount);
   // const all = useSelector(selectUserInfo);
-  const all = useSelector(state => state);
+  const all = useSelector((state: RootState) => state.counter);
   console.log('counter');
   console.log(all);
 
